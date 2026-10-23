@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touchline | Squad Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">⚽ TOUCHLINE <small>TOURNAMENT TRACKER</small></a>
+    <nav>
+        <a class="active" href="index.html">Players & Stats</a>
+        <a href="pitch.html">Pitch View</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="page-heading">
+        <div>
+            <p class="eyebrow">TEAM MANAGEMENT</p>
+            <h1>Players & match stats</h1>
+            <p class="muted">Build your squads and track every player's performance.</p>
+        </div>
+        <span class="pill">● TOURNAMENT MODE</span>
+    </section>
+
+    <section class="stats-strip">
+        <div><span>PLAYERS</span><strong id="totalPlayers">0</strong></div>
+        <div><span>TEAM A</span><strong id="teamACount">0</strong></div>
+        <div><span>TEAM B</span><strong id="teamBCount">0</strong></div>
+        <div><span>TOTAL GOALS</span><strong id="totalGoals">0</strong></div>
+    </section>
+
+    <div class="two-col">
+        <section class="panel">
+            <div class="panel-head">
+                <div>
+                    <p class="eyebrow">SQUAD BUILDER</p>
+                    <h2>Add a player</h2>
+                </div>
+            </div>
+
+            <form id="playerForm">
+                <label for="name">Player name</label>
+                <input id="name" required maxlength="60"
+                       placeholder="e.g. Sipho Mokoena">
+
+                <div class="form-row">
+                    <div>
+                        <label for="team">Assign team</label>
+                        <select id="team">
+                            <option value="A">Team A</option>
+                            <option value="B">Team B</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="position">Position</label>
+                        <select id="position">
+                            <option>Goalkeeper</option>
+                            <option>Defender</option>
+                            <option>Midfielder</option>
+                            <option>Forward</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="photo">Player picture</label>
+                <input id="photo" type="file" accept="image/*">
+                <p class="hint">Optional. Use a picture from your computer.</p>
+
+                <button class="btn primary full" type="submit">
+                    + Add player to squad
+                </button>
+            </form>
+
+            <div class="note">
+                <strong>TIP</strong>
+                <span>Add your players here, then open Pitch View to position them on the field.</span>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-head">
+                <div>
+                    <p class="eyebrow">PLAYER REGISTER</p>
+                    <h2>Your players</h2>
+                </div>
+                <span class="muted" id="playerCountLabel">0 players</span>
+            </div>
+
+            <div class="toolbar">
+                <input id="search" placeholder="Search players...">
+                <select id="filterTeam">
+                    <option value="all">All teams</option>
+                    <option value="A">Team A</option>
+                    <option value="B">Team B</option>
+                </select>
+            </div>
+
+            <div id="playerList">
+                <div class="empty">No players added yet.</div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>TOUCHLINE <span>Your tournament. Your players. Your stats.</span></footer>
+<script src="app.js"></script>
+</body>
+</html>

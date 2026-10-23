@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touchline | Pitch View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">⚽ TOUCHLINE <small>TOURNAMENT TRACKER</small></a>
+    <nav>
+        <a href="index.html">Players & Stats</a>
+        <a class="active" href="pitch.html">Pitch View</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="page-heading">
+        <div>
+            <p class="eyebrow">TACTICAL BOARD</p>
+            <h1>The pitch</h1>
+            <p class="muted">Drag players between positions. Click a player to view their profile.</p>
+        </div>
+        <a class="btn secondary" href="index.html">+ Manage squad</a>
+    </section>
+
+    <div class="team-headers">
+        <div>
+            <span class="team-dot blue"></span>
+            <div><strong>TEAM A</strong><small id="teamASub">0 players placed</small></div>
+        </div>
+        <div class="pitch-instructions">DRAG & DROP PLAYERS</div>
+        <div>
+            <span class="team-dot orange"></span>
+            <div><strong>TEAM B</strong><small id="teamBSub">0 players placed</small></div>
+        </div>
+    </div>
+
+    <div class="pitch-wrap">
+        <div class="pitch">
+            <div class="half-label label-a">TEAM A</div>
+            <div class="half-label label-b">TEAM B</div>
+            <div class="half-line"></div>
+            <div class="center-circle"></div>
+            <div class="center-spot"></div>
+            <div class="penalty-box box-a"></div>
+            <div class="penalty-box box-b"></div>
+            <div class="goal-box goal-a"></div>
+            <div class="goal-box goal-b"></div>
+
+            <div class="slots" id="slotsA"></div>
+            <div class="slots" id="slotsB"></div>
+        </div>
+    </div>
+
+    <div class="below-pitch">
+        <span class="muted">Select a player to open their profile. Empty slots are available positions.</span>
+        <button id="resetPositions" class="btn text-btn">Reset positions</button>
+    </div>
+
+    <section class="panel bench-panel">
+        <div class="panel-head">
+            <div>
+                <p class="eyebrow">AVAILABLE SQUAD</p>
+                <h2>Bench / unplaced players</h2>
+            </div>
+            <span class="muted">Drag players onto the pitch</span>
+        </div>
+        <div id="bench" class="bench">
+            <div class="empty">Add players on the Players & Stats page to get started.</div>
+        </div>
+    </section>
+</main>
+
+<footer>TOUCHLINE <span>Build your lineup, one player at a time.</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
